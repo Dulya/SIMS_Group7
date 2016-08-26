@@ -29,15 +29,17 @@ public class ServletSignIn extends HttpServlet {
 		ArrayList info = ServiceDAO.loginAuthenticaton(username, userpwd);
 		if(info != null){
 			HttpSession session = request.getSession();
-			session.setAttribute("empId", info.get(0));
-			session.setAttribute("user_name",info.get(2));
-			System.out.println("session attripute empId" + info.get(0));
-			response.sendRedirect("index.jsp");
+			session.setAttribute("user_id", info.get(0));
+			session.setAttribute("user_type",info.get(1));
+			session.setAttribute("user_first_name",info.get(2));
+			session.setAttribute("user_last_name",info.get(3));
+			System.out.println("session attribute User Id: " + info.get(0));
+			response.sendRedirect("webComponents/html/Register.html");
 			
 		}
 		else{
 			System.out.println("Redirected to login!");
-			response.sendRedirect("login.html");
+			response.sendRedirect("index.html");
 		}
 	}
 

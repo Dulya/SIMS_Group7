@@ -20,10 +20,7 @@ public class ServiceDAO {
 		ArrayList info = new ArrayList();
 		try{
 			Connection con = JDBCUtil.getConnection();
-			String sql = "SELECT * FROM systen_user WHERE user_pwd=? AND user_name=?";
-			//String sql = "INSERT INTO systen_user (user_pwd, user_name)VALUES (?,?) ";
-			// write the rest to execute a prepared statement to authenticate user
-			// Complete tomorrow
+			String sql = "SELECT * FROM system_user WHERE password=? AND user_code=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1,userpassword);
 			ps.setString(2,username);
@@ -33,7 +30,8 @@ public class ServiceDAO {
 				System.out.println("ok logged is as: " + rs.getString("user_type"));
 				info.add(rs.getString("user_id"));
 				info.add(rs.getString("user_type"));
-				info.add(rs.getString("user_name"));
+				info.add(rs.getString("user_first_name"));
+				info.add(rs.getString("user_last_name"));
 			}
 			else{
 				System.out.println("No results!");
@@ -45,4 +43,8 @@ public class ServiceDAO {
 		}
 		return info;
 	}
+	
+	//=========================  Student Registration Form Data Adding ===============================//
+	//public static int studentRegistrationAdd();
+	
 }

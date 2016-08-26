@@ -13,11 +13,12 @@
     <url-pattern>/ServletSignIn</url-pattern>
   </servlet-mapping>
   <servlet>
-      <servlet-name>ServletSignOut</servlet-name>
-      <servlet-class>com.sims.servlet.ServletSignOut</servlet-class>
+    <servlet-name>ServletSignOut</servlet-name>
+    <servlet-class>com.sims.servlet.ServletSignOut</servlet-class>
   </servlet>
   <servlet-mapping>
-      <servlet-name>ServletSignOut</servlet-name>
-      <url-pattern>/ServletSignOut</url-pattern>
+    <servlet-name>ServletSignOut</servlet-name>
+    <url-pattern>/ServletSignOut</url-pattern>
   </servlet-mapping>
+
 </web-app>

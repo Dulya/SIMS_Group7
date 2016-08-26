@@ -3,11 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <title>SIMS</title>
-        <link href="css/style.css" rel="stylesheet" >
+        <link href="webComponents/css/stylelogin.css" rel="stylesheet" >
+		
+<style>
+
+#main{
+width:1515px;
+height:710px;
+background:url("webComponents/images/intro.jpg");
+}
+
+</style>
   </head>
 
   <body>
-	<div class="login-page">
+  <div id="main" >
+		<div id="log" class="login-page">
 	  <div class="form">
 		<h1>SIMS LOGIN</h1>
 		<form class="login-form" action="ServletSignIn" method="post">
@@ -18,6 +29,8 @@
 		</form>
 	  </div>
 	</div>
+  </div>
+	
     
   </body>
 </html>

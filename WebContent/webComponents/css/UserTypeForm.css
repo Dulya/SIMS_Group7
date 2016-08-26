@@ -1,0 +1,86 @@
+
+#users {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	
+    width: 100%;
+}
+
+#users td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#users tr:nth-child(even){background-color: #f2f2f2;}
+
+#users tr:hover {background-color: #ddd;}
+
+#users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+	
+    text-align: left;
+    background-color: #008080;
+    color: white;
+}
+
+#users td {
+    height:20px;
+}
+
+h3{
+	padding-left:29px;
+
+	padding-top:12px;
+	font-size:18;
+	color:black;
+}
+#topDiv{
+	width:100%;
+	height:50px;
+	margin-left:0px;
+	border-bottom:2px solid #A9A9A9;
+	background-color:#f2f2f2;
+	
+}
+
+#search {
+
+}
+
+#search input[type="text"] {
+    background: url(search-white.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #bebebe;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#search input[type="text"]:focus {
+    width: 200px;
+    }
+	
+.button {
+    background-color: #20B2AA; 
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+	border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+}
