@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sims</title>
-  <link href="webComponents/css/stylelogin.css" rel="stylesheet" >
+<title>Insert title here</title>
+  <link href="../css/stylelogin.css" rel="stylesheet" >
 
 <style>
 html{
@@ -43,7 +43,7 @@ overflow: hidden;
       rgba(3, 1, 0, 0.65)
     ),
     /* bottom, image */
-    url("webComponents/images/rt.jpg");
+    url("../images/rt.jpg");
     width:100%;
     height:660px;"
 }
@@ -69,14 +69,14 @@ overflow: hidden;
 <body>
 <div id="mainDiv">
 	<div id="leftDiv">
-		<img style="width:150px;height:150px;margin-left:18%;margin-top:70px" src="webComponents/images/ucsc.png" />
+		<img style="width:150px;height:150px;margin-left:18%;margin-top:70px" src="../images/ucsc.png"/>
 		<div style="margin-top:60px;">
 		<font style="color:white;padding:40px;font-size:14pt;"><b>Student Information</b> </font><br>
 		<font style="color:white;padding:40px;font-size:14pt"><b>Management System </b> </font>
 		</div>
 		
 		
-		<img style="width:250px;height:100px;margin-left:5%;margin-top:10px" src="webComponents/images/title.png"/>
+		<img style="width:250px;height:100px;margin-left:5%;margin-top:10px" src="../images/title.png"/>
 	</div>
 	<div id="rightDiv">
 		<div class="main" >
@@ -84,11 +84,11 @@ overflow: hidden;
 	  	<div class="form" style="background-color:#d9d9d9;opacity:0.8;">
 			<h1>SIMS LOGIN</h1>
 			<form class="login-form" action="ServletSignIn" method="post">
-		  <input type="text" name="user_name" placeholder="username"/>
-		  <input type="password" name="user_password" placeholder="password"/>
-		  <button type="submit" value="signin">login</button>
-		  <p class="message">Not registered? <a href="#">Create an account</a></p>
-		</form>
+		  	<input type="text" name="user_name" placeholder="username"/>
+		  	<input type="password" name="user_password" placeholder="password"/>
+		  	<button type="submit" value="signin">login</button>
+		  	<p class="message">Not registered? <a href="#">Create an account</a></p>
+			</form>
 	  </div>
 	</div>
   </div>

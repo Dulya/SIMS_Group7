@@ -6,20 +6,25 @@
 
 html {
 	height: 100%;
-	/*Image only BG fallback*/
-	/*background: url('http://thecodeplayer.com/uploads/media/gs.png');
-	/*background = gradient + image pattern combo*/
-	
 }
 
 body {
 	font-family: montserrat, arial, verdana;
+        background: #fff url(../img/bg.jpg) repeat top left;
 }
+h1{
+	font-size: 48px;
+	color: rgb(6, 106, 117);
+	padding: 2px 0 10px 0;
+	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
 /*form styles*/
 #msform {
-	width: 400px;
 	margin: 50px auto;
-	text-align: center;
 	position: relative;
 }
 #msform fieldset {
@@ -42,7 +47,7 @@ body {
 }
 /*inputs*/
 #msform input, #msform textarea {
-	padding: 15px;
+	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 10px;
@@ -50,13 +55,13 @@ body {
 	box-sizing: border-box;
 	font-family: montserrat;
 	color: #2C3E50;
-	font-size: 13px;
+	font-size: 12px;
 }
 /*buttons*/
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
-	font-weight: bold;
+	background: #0EC3CB;
+	font-weight: bold;z
 	color: white;
 	border: 0 none;
 	border-radius: 1px;
@@ -65,55 +70,75 @@ body {
 	margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px white;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #0EC3CB;
+}
+
+#msform .add-button {
+	display: inline-block;
+	background: #CED5D1;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	cursor: pointer;
+	padding: 5px 3px;
+	margin: 10px 5px;
+}
+#msform .add-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #79837D;
 }
 /*headings*/
 .fs-title {
-	font-size: 15px;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: #2C3E50;
 	margin-bottom: 10px;
 }
 .fs-subtitle {
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 11px;
 	color: #666;
 	margin-bottom: 20px;
 }
 /*progressbar*/
 #progressbar {
 	margin-bottom: 30px;
+	margin-left: 20px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
 }
+
 #progressbar li {
 	list-style-type: none;
-	color: white;
+	color: #80ffff;
 	text-transform: uppercase;
 	font-size: 9px;
-	width: 15.33%;/* length between progressbars*/
+	width: 25%;
 	float: left;
 	position: relative;
+	
 }
 #progressbar li:before {
 	content: counter(step);
+	margin:5px;
+	text-align:center;
 	counter-increment: step;
 	width: 20px;
 	line-height: 20px;
 	display: block;
 	font-size: 10px;
 	color: #333;
-	background: #81DAF5;
+	
+	background: white;
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
 }
 /*progressbar connectors*/
 #progressbar li:after {
 	content: '';
-	width: 100%;/* length of connectors*/
+	width: 100%;
 	height: 2px;
-	background: #81DAF5;
+	background: white;
 	position: absolute;
 	left: -50%;
 	top: 9px;
@@ -123,13 +148,9 @@ body {
 	/*connector not needed before the first step*/
 	content: none; 
 }
-/*marking active/completed steps darkblue*/
-/*The number of the step and the connector before it = darkblue*/
+
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #0B2161;
-	color: #81DAF5;
+	background: #0EC3CB;
+	color: #80ffff;
 }
-
-
-
 

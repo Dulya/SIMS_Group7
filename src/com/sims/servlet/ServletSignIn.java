@@ -34,12 +34,12 @@ public class ServletSignIn extends HttpServlet {
 			session.setAttribute("user_first_name",info.get(2));
 			session.setAttribute("user_last_name",info.get(3));
 			System.out.println("session attribute User Id: " + info.get(0));
-			response.sendRedirect("webComponents/html/Register.html");
+			response.sendRedirect("webComponents/jsp/Ref_Course.jsp");
 			
 		}
 		else{
 			System.out.println("Redirected to login!");
-			response.sendRedirect("index.html");
+			response.sendRedirect("login.html");
 		}
 	}
 

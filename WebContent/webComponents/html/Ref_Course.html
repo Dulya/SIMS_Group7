@@ -20,14 +20,15 @@
         <script src="../js/MainPage.js"></script>
     </head>
     <body >
-        <ul >
-            <li id="li-title"> <font style="color:white;">SIMS</font> </li>
-            <li><a  href="#"><img id="titleimg" src="../images/grad.jpg"/></li>
+        <ul class="topul">
+           
+          <li><a  href="#"><img id="titleimg" src="../images/UCSClogo.png"/></li>
+         
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn" onclick="myFunction1()"><img id="userimg" class="dropbtn"  src="../images/default-user.png"/></a>
+                <a href="javascript:void(0)" class="dropbtn" onclick="myFunction1()"><img id="userimg" class="dropbtn userIcon"  src="../images/default-user.png"/></a>
                 <div class="dropdown-content" id="myDropdown">
                     <a href="#">Profile</a>
-                    <a href="../../ServletSignOut">Sign Out</a>
+                    <a href="#">Sign Out</a>
                 </div>
             </li>
         </ul>
@@ -36,7 +37,7 @@
                 <h1>Applications</h1>
                 <div class="opened-for-codepen">
                     <a href="Register.html"><h2>Registration</h2><div></div></a>
-                    <a href="LoginRegistrationForm/index.html"><h2>Bursary Application</h2><div></div></a>
+                    <a href="Bursary.html"><h2>Bursary Application</h2><div></div></a>
                     <a href="IdCardApplication.html"><h2>Student ID Application</h2><div></div></a>
                     <div></div>
                 </div>
@@ -67,7 +68,7 @@
     <div>
         <div id="topDiv">
             <div style="float:left;width:15%">
-                <h3>Course Referance<h3>
+                <h3>Course Reference<h3>
                         </div>
                         <div style="float:right;width:85%">
                             <form method="get" action="/search" id="search">

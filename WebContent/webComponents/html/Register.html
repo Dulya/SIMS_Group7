@@ -18,18 +18,51 @@
         <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
         <script src="../js/MainPage.js"></script>
+         <script src="../js/Registration.js"></script>
+         
+           <style>
+        
+        	        	
+#title{
+    background: -webkit-repeating-linear-gradient(-45deg, 
+	rgb(18, 83, 93) , 
+	rgb(18, 83, 93) 20px, 
+	rgb(64, 111, 118) 20px, 
+	rgb(64, 111, 118) 40px, 
+	rgb(18, 83, 93) 40px);
+	margin-top: 10px;
+	
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+#title:after{
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+	background: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(147,184,189,0.8) 20%, rgba(147,184,189,1) 53%, rgba(147,184,189,0.8) 79%, rgba(147,184,189,0) 100%); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0))); 
+	background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+       
+        </style>
     </head>
 <body >
-	<ul >
-       <li id="li-title"> <font style="color:white;">SIMS</font> </li>
-       <li><a  href="#"><img id="titleimg" src="../images/grad.jpg"/></li>
-       <li class="dropdown">
-           <a href="javascript:void(0)" class="dropbtn" onclick="myFunction1()"><img id="userimg" class="dropbtn"  src="../images/default-user.png"/></a>
-           <div class="dropdown-content" id="myDropdown">
-               <a href="#">Profile</a>
-               <a href="../../ServletSignOut">Sign Out</a>
-           </div>
-       </li>
+	<ul class="topul">
+      
+       <li><img id="titleimg" src="../images/UCSClogo.png"/></li> 
+      <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="myFunction1()"><img id="userimg" class="dropbtn userIcon"  src="../images/default-user.png"/></a>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#">Profile</a>
+                    <a href="#">Sign Out</a>
+                </div>
+            </li>
+  
    </ul>
 
 	<div id="leftDiv">
@@ -37,15 +70,15 @@
               <h1>Applications</h1>
               <div class="opened-for-codepen">
                   <a href="Register.html"><h2>Registration</h2><div></div></a>
-                  <a href="LoginRegistrationForm/index.html"><h2>Bursary Application</h2><div></div></a>
+                  <a href="Bursary.html"><h2>Bursary Application</h2><div></div></a>
                   <a href="IdCardApplication.html"><h2>Student ID Application</h2><div></div></a>
                   <div></div>
               </div>
 
-              <h1>Reference Data</h1>
+                <h1>Reference Data</h1>
               <div class="opened-for-codepen">
-                  <a href="Ref_User.html"><h2 >User Type</h2> <div></div></a>
-                  <a href="Ref_Course.html"><h2>Courses</h2>	<div></div></a>
+                  <a href="../jsp/Ref_User.jsp"><h2 >User Type</h2> <div></div></a>
+                  <a href="../jsp/Ref_Course.jsp"><h2>Courses</h2>	<div></div></a>
               </div>
 
 
@@ -58,7 +91,7 @@
               
               <h1>Report Center</h1>
               <div class="opened-for-codepen">
-                  <a href="404.html"><h2>View Reports</h2><div></div></a>
+                  <a href="IntroPage.html"><h2>View Reports</h2><div></div></a>
                   <a href="404.html"><h2>View Graphs</h2><div></div></a>
                   <h2></h2><div></div>
               </div>
@@ -66,167 +99,203 @@
 	</div>
 
 	<div id="rightDiv" style="width:82% ;float:right">
+	<header>
+                        	<h1 id="title" align="center">Application for Registration</h1>
+                        </header>
 		<form action="#" autocomplete="on">
      		<div style="width:50%;height:400px;float:left;">
-                 <div id="container_demo" style="margin-left:0px;padding-left:5px">
-                 
-                    <a class="hiddenanchor" id="toregister"></a>
-                    <a class="hiddenanchor" id="tologin"></a>
-                    <div id="wrapper">
-	                        <div id="login" class="animate form"> 
-		                        <h1>Registration form</h1>
-		                         <p> 
-		                            <label for="username" class="uname"> Select your course </label>
-		                        </p>
-		                        <p class="computerscience"> 
-		                            <input type="checkbox" onclick="disableCS()" name="course" id="CS" value="CS"> 
-		                            <label for="loginkeeping">Computer Science</label>
-		                        </p> 
-		                        <p class="informationsystem"> 
-		                            <input type="checkbox" onclick="disableIS()" name="course" id="IS" value="IS"> 
-		                            <label for="loginkeeping">Information System</label>
-		                        </p>
-		                        <p> 
-		                            <label for="username" class="uname" data-icon="u"> Applicant's Full name </label>
-		                            <input align="right" id="username" name="fullname" required="required" type="text" placeholder="Rev./Mr./Miss./Mrs : Enter your name">
-		                        </p>
-		                        <p> 
-		                            <label for="username" class="uname" data-icon="u"> Name with intials </label>
-		                            <input id="username" name="namewithinitials" required="required" type="text" placeholder="Enter your name">
-		                        </p>
-		                        <p> 
-		                            <label for="username" class="uname" data-icon="u"> Permenent address </label>
-		                            <input id="username" name="permanentaddress" required="required" type="text" placeholder="Enter your address">
-		                        </p>
-		                        <p> 
-		                            <label for="username" class="uname" data-icon="e"> Email Address </label>
-		                            <input id="username" name="email" required="required" type="text" placeholder="example@gmail.com">
-		                        </p>
-		                        <p> 
-		                            <label for="username" class="uname" data-icon="u"> Date of birth </label>
-		                            <input id="username" name="dob" required="required" type="text" placeholder="DD/MM/YYYY" maxlength="10" minlength="10">
-		                        </p>
-		                        <p> 
-		                            <label for="username" class="uname" data-icon="p"> NIC Number </label>
-		                            <input id="username" name="nic" required="required" type="text" placeholder="xxxxxxxxxV" maxlength="10" minlength="9">
-		                        </p>                            
-	                        </div>
+                 <div id="container_demo" style="margin-left:0px;padding-left:50px">
+                            <a class="hiddenanchor" id="toregister"></a>
+                            <a class="hiddenanchor" id="tologin"></a>
+                            <div id="wrapper">
+                                <div id="login" class="animate form" style="height:750px;float:right;"> 
+                                <p > 
+                                            <label style="width:100px" for="username" class="uname"> Select photo </label>
+                                        </p><br>
+                                    <div style="margin-left:20px;" id="photo">
+                                        <input style="height:100px;width:220px" id="username" name="username" required="required" type="file">
+                                    </div>
+
+                                    <div  style="margin-top:10px;" id="selectcourse" style=";" >
+                                   
+                                        <p > 
+                                            <label style="width:100px" for="username" class="uname"> Select your course </label>
+                                        </p><br>
+                                    </div>
+                                        <p class="computerscience"> 
+                                            <input type="checkbox" onclick="disableCS()" name="loginkeeping" id="CS" value="loginkeeping"> 
+                                            <label for="loginkeeping">Computer Science</label>
+                                        </p> 
+                                        <p class="informationsystem"> 
+                                            <input type="checkbox" onclick="disableIS()" name="loginkeeping" id="IS" value="loginkeeping"> 
+                                            <label for="loginkeeping">Information System</label>
+                                        </p>
+                                        <div style="margin-top: 20px;">
+                                        <p> 
+                                            <label for="username" class="uname" data-icon="u"> Applicant's Full name </label>
+                                            <input align="right" id="username" name="username" required="required" type="text" placeholder="Rev./Mr./Miss./Mrs : Enter your name">
+                                        </p>
+                                        </div>
+                                        <div style="margin-top: 10px;">
+                                        <p> 
+                                            <label for="username" class="uname" data-icon="u"> Name with intials </label>
+                                            <input id="username" name="username" required="required" type="text" placeholder="Enter your name">
+                                        </p>
+                                        <p> 
+                                            <label for="username" class="uname" data-icon="u"> Permenent address </label>
+                                            <input id="username" name="username" required="required" type="text" placeholder="Enter your address">
+                                        </p>
+                                        <p> 
+                                            <label for="username" class="uname" data-icon="e"> Email Address </label>
+                                            <input id="username" name="username" required="required" type="text" placeholder="example@gmail.com">
+                                        </p>
+                                        <p> 
+                                            <label for="username" class="uname" data-icon="u"> Date of birth </label>
+                                            <input id="username" name="username" required="required" type="text" placeholder="DD/MM/YYYY" maxlength="10" minlength="10">
+                                        </p>
+                                        <p> 
+                                            <label for="username" class="uname" data-icon="p" style="margin-top:50px"> NIC Number </label>
+                                            <input id="username" name="username" required="required" type="text" placeholder="xxxxxxxxxV" maxlength="10" minlength="9">
+                                        </p>
+                                        <div >
+                                        <p> 
+                                            <label for="username" id="province" class="uname" style="width: 20px;" > Province </label>
+                                            <select name="Province" class="pro-select" style="float:right;">
+                                                <option value="Select">---Select---</option>
+                                                <option value="Central">Central</option>
+                                                <option value="Eastern">Eastern</option>
+                                                <option value="Northern">Northern</option>
+                                                <option value="North Central">North Central</option>
+                                                <option value="North Western">North Western</option>
+                                                <option value="Sabaragamuwa">Sabaragamuwa</option>
+                                                <option value="Southern">Southern</option>
+                                                <option value="Uva">Uva</option>
+                                                <option value="Western">Western</option>
+                                            </select>
+                                        </p>
+                                        </div>
+                                        
+                                </div>
+
+                                    
                         </div>
+                        
                     </div>
+                </div>  
      			</div>
 	 			<div style="width:50%;height:400px;float:right;">
-                	<div id="container_demo" style="margin-left:0px;">
-                    	<a class="hiddenanchor" id="toregister"></a>
-                    	<a class="hiddenanchor" id="tologin"></a>
+                	 <div id="container_demo" style="margin-left:0px;">
+                   
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
                     
-                        	<div id="wrapper1">
-	                        	<div id="login2" class="animate form" style="height:700px">
-	                        
-		                            <div style="float:right;">
-		                                <p> 
-		                                    <label for="username" class="uname" >Fixed Line</label>
-		                                    <input type="text" name="fixedlinenum" placeholder="Enter your number" size="10">
-		                                </p>
-		                            </div>
-		                            <div style="float:left;">
-		                                <p> 
-		                                    <label for="username" class="uname" >Mobile Number</label>
-		                                    <input type="text" name="mobilenum" placeholder="Enter your number" size="10">
-		                                </p>
-		                            </div>
-		                            
-		
-		                            <div style="float:left;">
-		                                <p> 
-		                                    <label for="username" class="uname" >G.C.E.(A/L) Index No</label>
-		                                    <input type="text" name="alindex" placeholder="Enter your number" size="10">
-		                                </p>
-		                            </div>
-		                            <div style="float:right;">
-		                                <p> 
-		                                    <label for="username" class="uname" >Z-Score</label>
-		                                    <input type="text" name="z_score" placeholder="Enter your number" size="10">
-		                                </p>
-		                            </div>
-		                            
-		
-		                            <div style="float:left;">
-		                                <p> 
-		                                    <label for="username" class="uname" >Race</label>
-		                                    <input type="text" name="race" placeholder="Enter your number" size="10">
-		                                </p>
-		                            </div>
-		                            <div style="float:right;">
-		                                <p> 
-		                                    <label for="username" class="uname" >Religion</label>
-		                                    <input type="text" name="religion" placeholder="Enter your number" size="10">
-		                                </p>
-		                            </div>
-		                            
-		                            
-		                            <div style="height:100px;float:left;">
-		                                <p> 
-		                                    <label for="username" class="uname" >Civil Status</label>
-		                                    <input type="text" name="civilstatues" placeholder="Enter Civil Satues" size="10">
-		                                </p>
-		                                <div style="height:40px;">
-		                                    <label for="username" class="uname" >Father's /Guardian's :</label>
-		                                    <div style="width:70%;height:60px; float:right;">
-		                                        <p>
-		                                        <label for="username" class="uname" >Name</label>
-		                                        <input type="text" name="guardianname" placeholder="Enter Father's /Guardian's name" size="10">
-		                                        </p>
-		                                    </div>
-		                                    <div style="width:70%;height:60px; float:right;">
-		                                        <p>
-		                                        <label for="username" class="uname" >Occupation</label>
-		                                        <input type="text" name="occupation" placeholder="Enter your number" size="10">
-		                                        </p>
-		                                    </div>
-		                                    <div style="width:70%; float:right;height:80px;">
-		                                        <p>
-		                                        <label for="username" class="uname" >Address of place of work</label>
-		                                        <input type="text" name="workplaceaddress" placeholder="Enter address" size="10">
-		                                        </p>
-		                                    </div>
-		                                </div>
-		                                
-		
-		                                <div >
-		                                    <div style="height:30px;float:left;">
-		                                    <label for="username" class="uname" >In Case of Emergency please inform:</label>
-		                                    </div>
-		                                    <div style="width:70%;height:60px; float:right;">
-		                                        <p>
-		                                        <label for="username" class="uname" >Name</label>
-		                                        <input type="text" name="emargencycontatct" placeholder="Enter Father's /Guardian's name" size="10">
-		                                        </p>
-		                                    </div>
-		                                    <div style="width:70%;height:60px; float:right;">
-		                                        <p>
-		                                        <label for="username" class="uname" >Address</label>
-		                                        <input type="text" name="emargencyaddress" placeholder="Enter your number" size="10">
-		                                        </p>
-		                                    </div>
-		                                    <div style="width:70%; height:80px; float:right;">
-		                                        <p>
-		                                        <label for="username" class="uname" >Address of place of work</label>
-		                                        <input type="text" name="emargancyworkplaceaddress" placeholder="Enter your number" size="10">
-		                                        </p>
-		                                    </div>
-		                                     <button class="botton" type="submit" style="float:right;width:40%;height:30px;top:100px;" onclick="alert('Thank you!')">Submit</button>  
-		                                </div>
-	                            </div>
-	                        
-	                        </div>
+                        <div id="wrapper1">
+                            <div id="login2" class="animate form" style="height:750px">
+                                <!--<form action="#" autocomplete="on">-->  
+                                <div style="float:right;">
+                                    <p> 
+                                        <label for="username" class="uname" >Fixed Line</label>
+                                        <input type="text" name="username" placeholder="Enter your number" size="10" style="width:90%">
+                                    </p>
+                                </div>
+                                <div style="float:left;">
+                                    <p> 
+                                        <label for="username" class="uname">Mobile Number</label>
+                                        <input type="text" name="username" placeholder="Enter your number" size="10" style="width:80%">
+                                    </p>
+                                </div>
+                            
+
+                                <div style="float:left;margin-top:10px">
+                                    <p> 
+                                        <label for="username" class="uname" >G.C.E.(A/L) Index No</label>
+                                        <input type="text" name="username" placeholder="Enter your number" size="10" style="width:67%">
+                                    </p>
+                                </div>
+                                <div style="float:left;margin-top:10px">
+                                    <p> 
+                                        <label for="username" class="uname"  >Z-Score</label>
+                                        <input type="text" name="username" placeholder="Enter your number" size="10" style="width:100%">
+                                    </p>
+                                </div>
+                            
+
+                                <div style="float:right;margin-top:10px;margin-left:10px;">
+                                    <p> 
+                                        <label for="username" class="uname"  >Race</label>
+                                        <input type="text" name="username" placeholder="Enter your number" size="10" style="width:70%">
+                                    </p>
+                                </div>
+
+                                <div style="float:left;margin-top:10px;">
+                                    <p> 
+                                        <label for="username"class="uname"  >Religion</label>
+                                        <input type="text" name="username" placeholder="Enter your number" size="10" style="width:100%">
+                                    </p>
+                                </div>
+                            
+                            
+                                <div style="float:left;margin-top:10px">
+                                    <p> 
+                                        <label for="username" class="uname" >Civil Status</label>
+                                        <input type="text" name="username" placeholder="Enter your number" size="10" style="width:97%">
+                                    </p>    
+                                    <div style="height:40px;margin-top:10px">
+                                        <label for="username" class="uname" >Father's /Guardian's :</label>
+                                        <div style="width:70%;height:60px; float:right;">
+                                            <p>
+                                                <label for="username"class="uname" >Name</label>
+                                                <input type="text" name="username" placeholder="Enter Father's /Guardian's name" size="10">
+                                            </p>
+                                        </div>
+                                        <div style="width:70%;height:60px; float:right;margin-top:10px">
+                                            <p>
+                                                <label for="username" class="uname"  >Occupation</label>
+                                                <input type="text" name="username" placeholder="Enter your number" size="10">
+                                            </p>
+                                        </div>
+                                        <div style="width:70%; float:right;height:80px;margin-top:10px">
+                                            <p>
+                                                <label for="username" class="uname"  >Address of place of work</label>
+                                                <input type="text" name="username" placeholder="Enter your number" size="10">
+                                            </p>
+                                        </div>
+                                    </div>
+                                
+
+                                    <div >
+                                        <div style="height:30px;float:left;">
+                                            <label for="username" class="uname" >In Case of Emergency please inform:</label>
+                                        </div>
+                                        <div style="width:70%;height:60px; float:right;margin-top:10px">
+                                            <p>
+                                                <label for="username" class="uname"  >Name</label>
+                                                <input type="text" name="username" placeholder="Enter Father's /Guardian's name" size="10">
+                                            </p>
+                                        </div>
+                                        <div style="width:70%;height:60px; float:right;margin-top:10px">
+                                            <p>
+                                                <label for="username" class="uname"  >Address</label>
+                                                <input type="text" name="username" placeholder="Enter your number" size="10">
+                                            </p>
+                                        </div>
+                                        <div style="width:70%; height:80px; float:right;margin-top:10px">
+                                            <p>
+                                                <label for="username" class="uname"class="uname"  >Address of place of work</label>
+                                                <input type="text" name="username" placeholder="Enter your number" size="10">
+                                            </p>
+                                        </div>
+                                     <button class="botton" type="button" style="float:right;width:40%;height:30px;top:100px;" onclick="alert('Thank you!')">Submit</button>  
+                                    </div>
+                                </div>
+                            </div>
                         </div>      
-                   	</div>
-               	</div>
-               	</form>
-     		</div>
+                        
+                            </div>
 		</div>
 	</body>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="../js/Registration.js"></script>
 	<script type="text/javascript">
 		function disableCS() {
 			if(document.getElementById("CS").checked){
