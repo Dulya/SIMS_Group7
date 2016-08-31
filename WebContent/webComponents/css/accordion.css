@@ -33,6 +33,7 @@ body {
 }
 .accordion h1:not(:last-of-type) {
   border-bottom: 1px dotted #1abc9c;
+  border-top: 1px solid #1abc9c;
 }
 .accordion div, .accordion p {
   display: none;

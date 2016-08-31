@@ -20,6 +20,9 @@
         <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
         <script src="../js/MainPage.js"></script>
+        <style type="text/css">
+        	
+        </style>
     </head>
     <body >
         <ul >
@@ -67,6 +70,7 @@
 </div>
 <div id="rightDiv" >
 	<img alt="" src="../images/homeImage.jpg" style="width: 1245px; height: 600px">
+	
 
 
                                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import com.sims.util.FIleCreaterUtil;
 import com.sims.util.JDBCUtil;
+import com.sims.util.PdfCreaterUtil;
 
 public class ServiceDAO {
 	
@@ -47,7 +48,7 @@ public class ServiceDAO {
 		return info;
 	}
 	/*
-	 * ############################## Student Registration Application Data Handing #####################
+	 * ############################## Student Registration Application Data Handing Process #####################
 	 */
 	public static int studentApplicationAdd(ArrayList<String> arryList) {
 		int result = 0;
@@ -95,8 +96,15 @@ public class ServiceDAO {
 				int fileCreadted = 0;
 				// Creating the Folder for student
 				fileCreadted = FIleCreaterUtil.createUserFolder(arryList.get(3));
-				if(fileCreadted == 1) System.out.println("File " + arryList.get(3) +" is created");
-				else System.out.println("Cannot create file " + arryList.get(3));
+				if(fileCreadted == 1) {
+					System.out.println("File " + arryList.get(3) +" is created");
+					int pdfCreated = 0;
+					System.out.println("Calling PdfUtil");
+					pdfCreated = PdfCreaterUtil.createPDFStuRegiApplication(arryList.get(5),arryList.get(4),arryList.get(28),arryList.get(7),arryList.get(8),arryList.get(9),arryList.get(10),arryList.get(25),arryList.get(26),arryList.get(27),arryList.get(21),arryList.get(3),arryList.get(11),arryList.get(12),arryList.get(13),arryList.get(14),arryList.get(15),arryList.get(16),arryList.get(17),arryList.get(23),arryList.get(18),arryList.get(24),arryList.get(19),arryList.get(22));//full name passed 
+				}
+				else {
+					System.out.println("Cannot create file " + arryList.get(3));
+				}
 			}
 		}catch(SQLException e){
 			System.err.println("Student Appilication is not submitted" + e.getMessage());

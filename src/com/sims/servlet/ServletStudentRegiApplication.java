@@ -46,6 +46,11 @@ public class ServletStudentRegiApplication extends HttpServlet {
 		String emargancyContWorkPlace = request.getParameter("emargancyworkplaceaddress");
 		String photoPath = "N_A";
 		String submittedDate = request.getParameter("submitted_date");
+		String nameWithInitials = request.getParameter("namewithinitials");
+		
+		String tempAddress = request.getParameter("tempaddress");
+		String tempFixedLine = request.getParameter("tempfixedline");
+		String tempMobileNum = request.getParameter("tempfixedline");
 		
 		
 		civilStatues = civilStatues.toLowerCase();
@@ -87,6 +92,12 @@ public class ServletStudentRegiApplication extends HttpServlet {
 		arryList.add(submittedDate);
 		arryList.add(guardianWorkPlaceAddress);
 		arryList.add(emargancyContWorkPlace);
+		
+		arryList.add(tempAddress);
+		arryList.add(tempFixedLine);
+		arryList.add(tempMobileNum);
+		
+		arryList.add(nameWithInitials);
 		
 		result = ServiceDAO.studentApplicationAdd(arryList);
 		if(result == 1){

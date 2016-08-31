@@ -45,7 +45,7 @@ overflow: hidden;
     /* bottom, image */
     url("webComponents/images/rt.jpg");
     width:100%;
-    height:660px;"
+    height:810px;"
 }
 .main{
 
@@ -58,7 +58,7 @@ overflow: hidden;
    color: #FFFFFF;
    font-weight: bold;
    width:1515px;
-	height:710px;
+	height:810px;
 	
 	
 }

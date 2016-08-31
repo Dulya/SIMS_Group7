@@ -2,9 +2,9 @@
             <aside class="accordion">
                 <h1>Applications</h1>
                 <div class="opened-for-codepen">
-                    <a href="../html/Register.html"><h2>Registration</h2><div></div></a>
-                    <a href="../html/Bursary.html"><h2>Bursary Application</h2><div></div></a>
-                    <a href="IdCardApplication.html"><h2>Student ID Application</h2><div></div></a>
+                    <a href="StudRegiApplication.jsp"><h2>Student Registration Application</h2><div></div></a>
+                    <a href="BursaryForm.jsp"><h2>Bursary Application</h2><div></div></a>
+                    <a href="IdCardApplication.jsp"><h2>Student ID Application</h2><div></div></a>
                     <div></div>
                 </div>
 

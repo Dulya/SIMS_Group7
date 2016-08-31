@@ -17,7 +17,9 @@ body{
     border-top:5px solid #008080;
     border-bottom:5px solid #008080;
 	height:75px;
-	
+	position:fixed;
+	width:100%;
+	z-index:9;
 }
 
 #bodyDiv{
@@ -53,7 +55,8 @@ a:link {
 	height:100%;
 	float:left;
 	background-color:#a9a9a9;
-	
+	position:fixed;
+	margin-top:84px;
 	
 	
 }
@@ -77,6 +80,7 @@ a:link {
 	height:100%;
 	cursor:pointer;
 	border-right:4px solid #cccccc;
+	
 }
 .accordion-content{
 	cursor:auto;
@@ -156,6 +160,7 @@ text-align:left!important
 	width:235px;
 	height:570px;
 	float:left;
+	
 	boder-right:2px solid red;
 	background-color:#a9a9a9;
 	height: calc(100vh - 75px);
@@ -164,7 +169,7 @@ text-align:left!important
 #rightDiv{
 	float:right;
 	width:82%;
-	
+	margin-top:88px;
 	
 }
 
@@ -184,7 +189,7 @@ text-align:left!important
 
 .dropdown {
     display: inline-block;
-	padding-left:900px;
+	padding-left:70%;
 }
 .userIcon{
 	float:right;

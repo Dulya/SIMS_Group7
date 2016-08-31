@@ -6,6 +6,7 @@
 	 padding: 0;
 	 margin: 0 auto;
 	 font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
+	 z-index: 9;
 }
 #My-class input{
 	float:left;
@@ -43,6 +44,7 @@ a.hiddenanchor{
 	margin: 10px auto;	
 	width: 500px;
 	position: relative;	
+	z-index:9;
 }
 #wrapper1{
 	width: 60%;
@@ -389,15 +391,15 @@ p.change_link{
 		 border-radius: 5px;
 }
 #register{	
-	z-index: 21;
+	z-index: 9;
 	opacity: 0;
 }
 #login{
-	z-index: 22;
+	z-index: 9;
 }
 #toregister:target ~ #wrapper #register,
 #tologin:target ~ #wrapper #login{
-	z-index: 22;
+	z-index: 9;
 	-webkit-animation-name: fadeInLeft;
 	-moz-animation-name: fadeInLeft;
 	-ms-animation-name: fadeInLeft;
